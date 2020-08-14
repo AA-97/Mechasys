@@ -1,0 +1,19 @@
+{
+  "name": "mechasys",
+  "version": "1.0.0",
+  "description": "Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AA-97/Mechasys.git"
+  },
+  "author": "Abishand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AA-97/Mechasys/issues"
+  },
+  "homepage": "https://github.com/AA-97/Mechasys#readme"
+}
