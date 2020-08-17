@@ -4,6 +4,9 @@
   "description": "Project",
   "main": "index.js",
   "scripts": {
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/AA-97/Mechasys/issues"
   },
-  "homepage": "https://github.com/AA-97/Mechasys#readme"
+  "homepage": "https://github.com/AA-97/Mechasys#readme",
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  }
 }
