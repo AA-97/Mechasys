@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useStoreState } from "easy-peasy";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
+
+// material ui imports
 import {
   Typography,
   Container,
@@ -37,6 +39,7 @@ const StyledTableCell = withStyles(theme => ({
   },
 }))(TableCell);
 
+// table component to view list of users
 const ViewUsers = () => {
   const classes = useStyles();
 
@@ -48,8 +51,6 @@ const ViewUsers = () => {
   };
 
   const { users } = useStoreState(state => state.user);
-
-  useEffect(() => {}, [users]);
 
   return (
     <Container>

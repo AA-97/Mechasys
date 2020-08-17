@@ -1,5 +1,6 @@
 import { action } from "easy-peasy";
 
+// variables used for snackbar pop up
 const notifierModel = {
   success: true,
   open: false,

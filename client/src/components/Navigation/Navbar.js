@@ -13,7 +13,7 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
-const Home = () => {
+const Navbar = () => {
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <div>
       <AppBar position="static" className={classes.appBar}>
-        <Toolbar>
+        <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -93,6 +93,9 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     background: "#191970",
   },
+  toolbar: {
+    minHeight: "7vh",
+  },
   navLink: {
     color: "#fff",
     textDecoration: "none",
@@ -131,4 +134,4 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default Home;
+export default Navbar;

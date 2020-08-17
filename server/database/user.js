@@ -10,6 +10,8 @@ const pool = mysql.createPool({
 
 let userdb = {};
 
+// list of functions to retrieve information from database
+
 userdb.getUsers = () => {
   return new Promise((resolve, reject) => {
     pool.query("SELECT * FROM users", (err, results) => {
@@ -69,7 +71,6 @@ userdb.searchUserFirstName = firstName => {
       [firstName + "%"],
       (err, results) => {
         if (err) {
-          console.log("fail");
           return reject(err);
         }
         return resolve(results);

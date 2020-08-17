@@ -8,6 +8,7 @@ function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
+// pop up notifier component used when an action has been successful or unsuccessful
 const CustomSnackbar = () => {
   const { message, success, open } = useStoreState(state => state.notifier);
   const { close } = useStoreActions(actions => actions.notifier);

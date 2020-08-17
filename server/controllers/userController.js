@@ -50,6 +50,7 @@ exports.searchUser = async (req, res) => {
     const { lastName } = req.body;
     let users = [];
 
+    // search database based on completed fields
     if (firstName != "" && lastName != "") {
       users = await userdb.searchUser(firstName, lastName);
     } else if (firstName != "") {

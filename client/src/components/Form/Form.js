@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { useStoreActions } from "easy-peasy";
 
-// Material UI
+// Material UI imports
 import {
   Typography,
   Container,
@@ -12,6 +12,7 @@ import {
   Button,
 } from "@material-ui/core";
 
+// form component to add or search a user
 const Form = () => {
   const classes = useStyles();
 
@@ -37,6 +38,7 @@ const Form = () => {
     setIsSearching(true);
   };
 
+  // call submit or search methods when user clicks on button
   useEffect(() => {
     if (isSubmitting) {
       addUser({ firstName: values.firstName, lastName: values.lastName });
@@ -62,48 +64,40 @@ const Form = () => {
           <Typography variant="h4" className={classes.title}>
             Add or Search User
           </Typography>
-
-          <Grid item xs={12} md={12} lg={12}>
-            <Grid
-              container
-              direction="row"
-              justify="center"
-              alignItems="center"
-            >
-              <Grid item xs={12} md={4} lg={4}>
-                <TextField
-                  label="First Name"
-                  color="primary"
-                  onChange={handleChange("firstName")}
-                  value={values.firstName || ""}
-                />
-              </Grid>
-              <Grid item xs={12} md={4} lg={4}>
-                <TextField
-                  label="Last Name"
-                  color="primary"
-                  onChange={handleChange("lastName")}
-                  value={values.lastName || ""}
-                />
-              </Grid>
-              <Grid item xs={6} md={2} lg={2}>
-                <Button
-                  variant="contained"
-                  className={classes.button}
-                  onClick={handleSubmit}
-                >
-                  Submit
-                </Button>
-              </Grid>
-              <Grid item xs={6} md={2} lg={2}>
-                <Button
-                  variant="contained"
-                  className={classes.button}
-                  onClick={handleSearch}
-                >
-                  Search
-                </Button>
-              </Grid>
+          <Grid container direction="row" justify="center" alignItems="center">
+            <Grid item xs={12} md={4} lg={4}>
+              <TextField
+                label="First Name"
+                color="primary"
+                onChange={handleChange("firstName")}
+                value={values.firstName || ""}
+              />
+            </Grid>
+            <Grid item xs={12} md={4} lg={4}>
+              <TextField
+                label="Last Name"
+                color="primary"
+                onChange={handleChange("lastName")}
+                value={values.lastName || ""}
+              />
+            </Grid>
+            <Grid item xs={6} md={2} lg={2}>
+              <Button
+                variant="contained"
+                className={classes.button}
+                onClick={handleSubmit}
+              >
+                Submit
+              </Button>
+            </Grid>
+            <Grid item xs={6} md={2} lg={2}>
+              <Button
+                variant="contained"
+                className={classes.button}
+                onClick={handleSearch}
+              >
+                Search
+              </Button>
             </Grid>
           </Grid>
         </Card>

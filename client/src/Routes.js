@@ -10,9 +10,8 @@ export const Routes = () => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path="/nameList" component={NameList} />
-      <Route path="/contactUs" component={NotFound} />
-      <Route path="/about" component={NotFound} />
+      <Route exact path="/nameList" component={NameList} />
+      <Route component={NotFound} />
     </Switch>
   );
 };

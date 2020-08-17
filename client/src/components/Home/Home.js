@@ -6,9 +6,10 @@ import { useStoreActions } from "easy-peasy";
 import Form from "../Form/Form";
 import ViewUsers from "../User/ViewUsers";
 
-// Material UI
+// Material UI imports
 import { Typography } from "@material-ui/core";
 
+// main home page component
 const Home = () => {
   const classes = useStyles();
 
@@ -38,6 +39,8 @@ const mainImage = require("../../Images/background.jpg");
 const useStyles = makeStyles(theme => ({
   root: {
     paddingBottom: 40,
+    backgroundColor: "#F0F8FF",
+    height: "60vh",
   },
   title: {
     fontSize: 70,
