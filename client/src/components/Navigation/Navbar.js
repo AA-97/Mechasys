@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <div>
       <AppBar position="static" className={classes.appBar}>
-        <Toolbar className={classes.toolbar}>
+        <Toolbar>
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -92,9 +92,6 @@ const useStyles = makeStyles(theme => ({
   appBar: {
     width: "100%",
     background: "#191970",
-  },
-  toolbar: {
-    minHeight: "7vh",
   },
   navLink: {
     color: "#fff",
