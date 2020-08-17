@@ -34,3 +34,5 @@ I made it responsive so that it gets displayed properly on smaller sized devices
 - NOTE: You can also run `npm start` in the root folder to run both frontend and backend concurrently, however, this may only work on Windows computers. Otherwise see steps 4 and 5 to run both in seperate windows.
 
 6. The web application should now be working.
+
+- NOTE: If the backend or database doesn't seem to be working, it may have to do with either the version of MySQL or because a root user may be used. You can try running this script on your MySQL workbench: `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'` where `password` is replaced by your current password. Restart the application and it should work.
